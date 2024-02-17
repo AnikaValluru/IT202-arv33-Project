@@ -1,0 +1,50 @@
+h1, p {
+    font-family: Verdana, Tahoma, sans-serif;
+    color: white; 
+    background-color: #5f0808;
+    font-size:50px;
+    text-align: center;
+    width: 1490px;
+    padding: 10px;
+}
+
+p{
+    border: 3px dotted white;
+}
+
+h5 {
+    color:white
+}
+
+body {
+    background-color: #5f0808
+
+}
+
+p {
+    font-size:large;
+}
+
+h3 {
+    font-size:x-large;
+    color: white;
+}
+
+h1, h2 {
+    margin: .5em 0 .25em;
+    padding-left: 15px; 
+}
+
+/* unvisited */
+a:link {
+    color: skyblue;
+}
+/* mouse over link */
+a:focus, a:hover {
+    color: darkblue;
+}
+/* visited */
+a:visited {
+    color: white;
+}
+

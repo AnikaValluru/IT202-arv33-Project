@@ -1,3 +1,8 @@
+<!--Anika Valluru
+02/29/24
+IT202-002 
+Phase 2 Assignment: Read SQL Data using PHP 
+arv33@njit.edu-->
 <?php
 require_once('database_njit.php');
 

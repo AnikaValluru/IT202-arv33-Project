@@ -1,5 +1,21 @@
 <html> 
+<h4>
+    <?php 
+    if(session_status()==PHP_SESSION_NONE){
+        session_start();
+      }
+      //session_start();
+      echo "Welcome " . " " .  $_SESSION["firstName"] . " ". $_SESSION["lastName"]. " (". $_SESSION["email"]. ")! ";
+      
+?>
+</h4>
     <head> 
+        <!--logo-->
+<figure>
+    <div class="right small">
+    <img src="https://as2.ftcdn.net/v2/jpg/02/75/30/59/1000_F_275305997_YvxcwscsKJo45E0P1OSrArT6sFiZ5yWT.jpg" alt="Your Logo" 
+      width="100px" height="90px" />
+</figure>
     <header>
         <h1>Gourmet Food and Snacks</h1> 
         <link rel="icon" href="gourmetimage.jpg" type="image/jpg" />
@@ -8,12 +24,25 @@
     <head>
     <body>
     <main>
-    <div class="right small">
-    <div class="paddingbar" style="letter-spacing:2px;">
-    <a href="projectHomepage.php" class="button">Home</a>
-    <div class="hide-small">
-     <!-- <a href="projectShippingpage.php" class="button">Shipping Page</a> -->
-     <a href="shippingform.php" class="button">Shipping Page</a> 
+    <!--navigation bar-->
+<nav>
+            <div class="right small">
+            <div class="paddingbar" style="letter-spacing:2px;">
+            <div class="hide-small">
+            <a href="projectLogin.php" class="button">Login</a> 
+            <div class="hide-small">
+            <br>
+            <a href="projectHomepage.php" class="button">Home</a>
+            <div class="hide-small">
+            <a href="shippingform.php" class="button">Shipping Page</a> 
+            <div class="hide-small">
+            <a href="projectProduct_list.php" class="button">Product List</a> 
+            <div class="hide-small">
+            <a href="projectAdd_product_form.php" class="button">Add Product</a> 
+            <div class="hide-small">
+            <br>
+            <a href="projectLogout.php" class="button">Logout</a> 
+        </nav>
 </div>
 </div>
 

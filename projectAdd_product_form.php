@@ -9,6 +9,7 @@ require_once('database_njit.php');
 $query = 'SELECT *
           FROM gourmetCategories
           ORDER BY gourmetCategoryID';
+$db=getDatabase();
 $statement = $db->prepare($query);
 $statement->execute();
 $categories = $statement->fetchAll(); //fetchAll used for 2D arrays 
@@ -16,6 +17,12 @@ $statement->closeCursor();
 ?>
 <!DOCTYPE html>
 <html>
+<h4>
+    <?php 
+      session_start();
+      echo "Welcome " . " " .  $_SESSION["firstName"] . " ". $_SESSION["lastName"]. " (". $_SESSION["email"]. ")! ";
+?>
+</h4>
     <!--logo-->
 <figure>
     <div class="right small">
@@ -27,6 +34,10 @@ $statement->closeCursor();
 <nav>
             <div class="right small">
             <div class="paddingbar" style="letter-spacing:2px;">
+            <div class="hide-small">
+            <a href="projectLogin.php" class="button">Login</a> 
+            <div class="hide-small">
+            <br>
             <a href="projectHomepage.php" class="button">Home</a>
             <div class="hide-small">
             <a href="shippingform.php" class="button">Shipping Page</a> 
@@ -34,6 +45,9 @@ $statement->closeCursor();
             <a href="projectProduct_list.php" class="button">Product List</a> 
             <div class="hide-small">
             <a href="projectAdd_product_form.php" class="button">Add Product</a> 
+            <div class="hide-small">
+            <br>
+            <a href="projectLogout.php" class="button">Logout</a> 
         </nav>
 
 <!-- the head section -->

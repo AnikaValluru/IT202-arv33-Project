@@ -6,6 +6,7 @@ arv33@njit.edu-->
 
 <?php
 // Get the product data
+
 $gourmetCategory_id = filter_input(INPUT_POST, 'gourmetCategory_id', FILTER_VALIDATE_INT);
 $gourmetCode = filter_input(INPUT_POST, 'gourmetCode');
 $gourmetName = filter_input(INPUT_POST, 'gourmetName');
@@ -24,6 +25,7 @@ if ($gourmetCategory_id == NULL || $gourmetCategory_id == FALSE || $gourmetCode 
 } else {
     
     require_once('database_njit.php');
+    $db=getDatabase();
 
     //Additional Error Checking for product code
     $query_check = 'SELECT COUNT(*) FROM gourmet WHERE gourmetCode = :gourmetCode';

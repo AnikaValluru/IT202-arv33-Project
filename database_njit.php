@@ -1,6 +1,8 @@
 <?php
 //slide 24
-$dsn='mysql:host=sql.njit.edu;port=3306;dbname=arv33';
+function getDatabase() {
+
+$dsn='mysql:host=sql1.njit.edu;port=3306;dbname=arv33';
 $username='arv33';
 $password='Val45197!!';
 
@@ -13,6 +15,8 @@ try {
     include('database_error.php');
     exit();
 
+}
+return $db;
 }
 
 ?>

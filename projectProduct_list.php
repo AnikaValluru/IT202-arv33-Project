@@ -113,6 +113,7 @@ $statement3->closeCursor();
     <h2><?php echo $gourmetCategory_name; ?></h2>
     <table>
       <tr>
+        <th>Product ID</th>
         <th>Code</th>
         <th>Name</th>
         <th>Price</th>
@@ -120,7 +121,11 @@ $statement3->closeCursor();
 
       <?php foreach ($products as $product) : ?>
       <tr>
-        <td><?php echo $product['gourmetCode']; ?></td>
+
+         <!-- Modify the Product Code column to be a hyperlink -->
+        <td><?php echo $product['gourmetID']; ?></td>
+        <td><a href="projectDetails.php?gourmet_id=<?php echo $product['gourmetID']; ?>">
+        <?php echo $product['gourmetCode']; ?></td>
         <td><?php echo $product['gourmetName']; ?></td>
         <td><?php echo $product['price']; ?>
       <td>
@@ -145,3 +150,4 @@ $statement3->closeCursor();
 </main>  
 </body>
 </html>
+
